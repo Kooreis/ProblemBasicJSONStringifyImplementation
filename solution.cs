@@ -1,9 +1,6 @@
-function jsonStringify(obj) {
-    let type = typeof obj;
-
-    if (type !== "object" || type === null) {
-        if (/string|undefined|function/.test(obj)) {
-            obj = '"' + obj + '"';
-        }
-        return String(obj);
-    }
+else {
+        let json = []
+        , arr = (obj && obj.constructor === Array);
+        for (let k in obj) {
+            let v = obj[k];
+            type = typeof v;
